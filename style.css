@@ -1,0 +1,326 @@
+body {
+    background-image: url("../images/circles-light.png");
+    position: relative;
+    background-color: lightgrey;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* == Holds all of the important elements == */
+.first_container {  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1100px;
+    width: 960px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 2;
+    text-align: center;
+}
+
+    /* -- Holds everything in the header -- */
+    .header_container { 
+        display: flex;
+        width: 960px;
+        height: 77px;
+        padding-bottom: 10px;
+        justify-content: space-between;
+        background-color: rgba(255,255,255,0);
+    }
+    
+        /* -- Holds my name at the top of the screen -- */
+        .name_container {  
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #4aaaa5;
+            width: 200px;
+            height: 77px;
+            padding: 13px;
+            font-size: 30px;
+            color: white;
+        }
+
+        /* -- Holds the navigational buttons -- */
+        .button_container { 
+            display: flex;
+            width: 365px;
+            height: 77px;
+            justify-content: space-between;
+        }
+
+        /* -- Applies to all the div child classes which include the string "topbutton" -- */
+            div[class^='topbutton'] {
+                margin: 0 /*auto*/;
+                padding: 20px;
+                flex-grow: 1;   /* Allows the items in the container to be the same size*/
+                font-size: 20px;
+                font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+            }
+
+            /* -- "About" -- */
+            .topbutton_1 {
+                flex: 1;
+                color: #dddddd;
+            }
+
+            /* -- "Portfolio" -- */
+            .topbutton_2 {
+                flex: 2;
+                color: #dddddd;
+
+            }
+
+            /* -- "Contact" -- */
+            .topbutton_3 {
+                flex: 3;
+                color: #dddddd;
+
+            }
+
+            /* -- Vertical line dividers -- */
+            .divider {
+                width: 2px;
+                margin: 12px 0;
+                background: gray;
+                height: 40px;
+            }
+
+    /* -- Contains pretty much everything in the body -- */
+    .main_container {   
+        display: flex;
+        margin-top: 50px;
+        width: 960px;
+        height: 855px;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba (255,255,255,0);
+    }
+        
+        /* -- Contains the text of the "About me" section  -- */
+        .body_container {
+            display: flex;
+            height: 90%;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 650px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+        }
+
+            .main_header {
+                border-bottom: 1px solid #dddddd;
+                font-size: 30px;
+                text-align: left;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: #4aaaa5;
+                padding-left: 20px;
+                padding-top: 12px;
+                padding-bottom: 20px;
+                background-color: #ffffff;
+                margin-bottom: 10px;
+                width: 650px;
+            }
+
+        /* -- Where the main text is -- */
+            .main_body {    
+                width: 650px;
+                color: #777777;
+                font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+                padding: 10px 50px;
+                text-align: left;
+                background-color: #ffffff;
+                height: 80%;
+            }
+
+                .profile_pic {
+                    width: 200px;
+                    height: 200px;
+                    border: 1px solid #dddddd;
+                    float: left;
+                    background-size: 297px 200px;
+                    margin-left: 0px;
+                }
+
+            /* -- "Connect" section that contains links to social media -- */
+            .connect {
+                display: flex;
+                border: 1px solid #dddddd;
+                width: 270px;
+                height: 20%;
+                padding: 10px;
+                flex-direction: column;
+                align-items: center;
+                background-color: #ffffff;
+            }
+
+                .connect_header {
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-size: 23px;
+                    color: #4aaaa5;
+                    width: 250px;
+                    height: 50px;
+                    padding-top: 10px;
+                    border-bottom: 1px solid #dddddd;
+                }
+
+                .linkbutton_container {
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                    width: 250px;
+                    height: 50px;
+                }
+
+                    .github_button {
+                        height: 40px;
+                        width: 40px;
+                    }
+
+                    .linkedin_button {
+                        height: 40px;
+                        width: 40px;
+                    }
+
+                    .stackoverflow_button {
+                        height: 40px;
+                        width: 40px;
+                    }
+
+    /* -- Has my copyright -- */
+    footer {
+        background-color: rgba(255,255,255,0);
+        width: 300px;
+        height: 50px;
+        padding: 15px;
+        color: #ffffff;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -150px;
+        z-index: 2;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 16px;
+    }
+
+/* == The horizontal line divider that separates the header from the body == */
+.top_divider {
+    height: 2px;
+    background: gray;
+    position: absolute;
+    top: 20px;
+}
+
+/* == The long bar that lies behind the header == */
+.header_bar {
+    height: 77px;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 1;
+    border: 1px solid #cccccc;
+}
+
+/* == The long bar that lies behind the footer == */
+.footer_bar {
+    height: 50px;
+    background-color: #666666;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+}
+
+/*==================================================================================================================*/
+
+/* == Used in portfolio.html == */
+
+.project_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 650px;
+    color: #777777;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    padding: 10px 50px;
+    text-align: left;
+    background-color: #ffffff;
+    height: 90%;
+    margin-bottom: 20px;
+}
+
+
+.project_row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 170px;
+}
+
+.project_labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+}
+
+.project {
+    margin-bottom: 15px;
+    height: 120px;
+    width: 180px;
+    border: 1px solid #dddddd;
+}
+
+
+.project_holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+}
+
+.label {
+    font-size: 20px;
+}
+
+
+/*=================================================================================================*/
+
+/* == Used in contact.html == */
+
+input[type = text], textarea {
+    width: 100%;
+    padding: 12px 12px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+textarea {
+    height: 200px;
+}
+
+input[type = submit] {
+    height: 60px;
+    width: 120px;
+    background-color: #4aaaa5;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+input[type = submit]:hover {
+    background-color: #325a58;
+}
+
